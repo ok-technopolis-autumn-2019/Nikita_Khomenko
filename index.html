@@ -3,18 +3,20 @@
 <head>
     <meta charset="UTF-8" />
     <title>todos</title>
+    <link href="style.css" rel="stylesheet">
 </head>
 <body>
 <header class="todos-header">
     <h1 class="title">todos</h1>
 </header>
 <section class="todos_main-controls main-controls">
-      <span class="main-controls_select-all" title="Select all">
+    <div class="main-controls_all">
+      <div class="main-controls_select-all" title="Select all">
         <button class="select-all-button">
           Select all tasks
         </button>
-      </span>
-    <span class="main-controls_create-new">
+      </div>
+      <div class="main-controls_create-new">
         <input
                 type="text"
                 class="main-controls_create-new-input"
@@ -22,7 +24,8 @@
                 aria-label="Add new item"
                 autofocus="autofocus"
         />
-      </span>
+      </div>
+    </div>
 </section>
 <section class="todos_tasks">
     <ul class="todos_task-list tasks">
@@ -72,7 +75,7 @@
                         aria-label="complete the task"
                 />
                 <span class="task-item_text">JS</span>
-                <button class="task-item-delete">Delete task</button>
+                <button class="task-item_delete">Delete task</button>
             </div>
             <div class="task-item_edit" hidden="hidden">
             <textarea
@@ -91,7 +94,7 @@
                         aria-label="complete the task"
                 />
                 <span class="task-item_text">JS tools</span>
-                <button class="task-item-delete">Delete task</button>
+                <button class="task-item_delete">Delete task</button>
             </div>
             <div class="task-item_edit" hidden="hidden">
             <textarea
