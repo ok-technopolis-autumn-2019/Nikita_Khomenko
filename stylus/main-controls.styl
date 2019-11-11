@@ -1,0 +1,33 @@
+@import "_mixins.styl"
+@import "_vars.styl"
+
+.main-controls_all {
+  border-bottom: $item_border;
+  display: flex;
+  align-items: center;
+  height: 65px;
+}
+
+.select-all-button {
+  background: url("../image/allButton.svg") no-repeat;
+  background-position: center center;
+  h_w(65px,60px);
+  border:none;
+  text-indent: -9999px;
+  white-space: nowrap;
+}
+
+.main-controls_create-new {
+  width: 100%; /*input не видит родителя сверху*/
+}
+
+.main-controls_create-new-input {
+  box-sizing: border-box;
+  h_w(60px, 100%);
+  font-size: 25px;
+
+  &::placeholder {
+    color: $colors.greyC;
+    font-style: italic;
+  }
+}

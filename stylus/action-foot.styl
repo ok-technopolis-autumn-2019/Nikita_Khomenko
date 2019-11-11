@@ -1,0 +1,49 @@
+@import "_vars.styl"
+@import "_mixins.styl"
+
+.action-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 45px;
+}
+
+.task-clear-completed {
+  border: none;
+  background-color: white;
+  font-weight: 300;
+  font-size: 14px;
+  height: 45px;
+  color: $colors.grey8;
+  font-family: Roboto;
+  margin-right: 15px;
+}
+
+.actions-foot_item {
+  font-size: 14px;
+  color: $colors.grey8;
+}
+
+.task-counter {
+  margin-left: 15px;
+}
+
+.task-filter_input {
+  position:absolute;
+  margin-left: 22px;
+  opacity:0;
+
+  &:checked + .task-filter_text {
+    border-color: $colors.grey_checked_foot;
+  }
+
+  &:focus + .task-filter_text {
+    border-color: $colors.greyC;
+  }
+}
+
+.task-filter_text {
+  padding: 2px 7px;
+  border: 1px transparent solid;
+  border-radius: 5px;
+}

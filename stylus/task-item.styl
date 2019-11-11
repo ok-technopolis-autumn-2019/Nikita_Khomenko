@@ -1,0 +1,79 @@
+@import "_vars.styl"
+@import "_mixins.styl"
+
+.task-item_view {
+  border-bottom: $item_border;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    background-color: $colors.hover;
+  }
+
+  &:hover
+  .task-item_status:not(:checked)
+  + .task-item_status-label {
+    border-color: $colors.greyC;
+  }
+
+  &:hover .task-item_delete {
+    opacity: 1;
+  }
+}
+
+.task-item_status-label {
+  flex-shrink: 0;
+  h_w(40px,40px);
+  box-sizing: border-box;
+  margin: 10px 10px 10px 10px;
+  border: $item_border;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.task-item_status {
+  position: absolute;
+  h_w(60px, 60px);
+  opacity: 0;
+  margin: 0 0 10px 0;
+
+
+  &:checked + .task-item_status-label {
+    background-image: url("../image/check.svg");
+    background-position: 6px 8px;
+    background-repeat: no-repeat;
+    border-color: $colors.green;
+  }
+
+  &:checked ~ .task-item_text {
+    color: $colors.greyC;
+    text-decoration: line-through;
+  }
+
+  &:focus + .task-item_status-label {
+  border-color: $colors.greyC;
+  }
+}
+
+.task-item_text {
+  word-break: break-all;
+  flex-grow: 20;
+  font-weight: 100;
+  font-size: 25px;
+  margin: 15px 0 15px 0;
+}
+
+.task-item_delete {
+  flex-shrink: 0;
+  background: url("../image/close.svg") no-repeat;
+  text-indent: -9999px;
+  white-space: nowrap;
+  border: none;
+  h_w(20px, 20px);
+  margin-right: 10px;
+  opacity: 0;
+
+  &:focus {
+    opacity: 1;
+  }
+}

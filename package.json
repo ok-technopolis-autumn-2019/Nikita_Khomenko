@@ -1,0 +1,27 @@
+{
+  "name": "tst",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ok-technopolis-autumn-2019/Nikita_Khomenko.git"
+  },
+  "author": "Nikita_Khomenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ok-technopolis-autumn-2019/Nikita_Khomenko/issues"
+  },
+  "homepage": "https://github.com/ok-technopolis-autumn-2019/Nikita_Khomenko#readme",
+  "dependencies": {
+    "autoprefixer": "^9.7.1",
+    "postcss": "^7.0.21",
+    "postcss-import": "^12.0.1",
+    "postcss-nesting": "^7.0.1",
+    "postcss-sassy-mixins": "^2.1.0",
+    "reset.css": "^2.0.2"
+  }
+}
